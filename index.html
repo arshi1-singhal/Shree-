@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shree – A Safe Space for Women</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🌸 Shree</h1>
+  <p>A safe, anonymous space for women to share, listen and support each other. You are not alone.</p>
+</header>
+<nav role="tablist" id="tabs">
+  <button role="tab" data-t="stories" aria-selected="true">💬 Stories</button>
+  <button role="tab" data-t="comm" aria-selected="false">👭 Communities</button>
+  <button role="tab" data-t="help" aria-selected="false">📞 Helplines</button>
+  <button role="tab" data-t="safety" aria-selected="false">🛡️ Stay Safe</button>
+</nav>
+
+<main>
+<section id="stories" class="on">
+  <div id="cbar"></div>
+  <div class="card">
+    <h2>Share your story</h2>
+    <div class="meta">You post as <span class="alias" id="myAlias"></span>. No name, email or phone is collected or stored.</div>
+    <div class="row"><select id="cat" aria-label="Topic">
+      <option>Street harassment</option><option>Workplace</option><option>Online abuse</option><option>Domestic</option><option>Stalking</option><option>Other</option></select></div>
+    <textarea id="txt" maxlength="1500" placeholder="Write what happened, or what you are feeling. Your voice matters." style="margin-top:8px"></textarea>
+    <div class="row"><button class="btn" id="post">Share anonymously</button><button class="btn alt" id="newAlias">New alias</button><span class="meta" id="status"></span></div>
+    <div class="note" style="margin-top:10px">Please don’t post phone numbers, addresses or real names. In immediate danger? Call <b>112</b>.</div>
+  </div>
+  <div id="feed"></div>
+</section>
+
+<section id="comm">
+  <h2>Communities</h2>
+  <div class="card">
+    <b>Start a new community</b>
+    <div class="meta">Create a private-feeling circle around a topic, a city, a workplace or a shared experience.</div>
+    <input class="field" id="cName" maxlength="40" placeholder="Community name (e.g. Delhi Working Women)">
+    <textarea class="field" id="cDesc" maxlength="200" style="min-height:64px" placeholder="What is this community about? Add a few ground rules."></textarea>
+    <div class="row"><button class="btn" id="cMake">Create community</button><span class="meta" id="cStatus"></span></div>
+  </div>
+  <div id="cList"></div>
+  <div class="note">Be respectful. No names, numbers or addresses. Creators can’t yet remove posts, so please report problems to the site admin.</div>
+</section>
+
+<section id="help">
+  <h2>Emergency helplines (India)</h2>
+  <div class="card help"><div><b>112 – Emergency</b><div class="meta">Police, fire, ambulance – all India</div></div><a class="call red" href="tel:112">Call</a></div>
+  <div class="card help"><div><b>181 – Women Helpline</b><div class="meta">24×7 support, counselling, referral</div></div><a class="call" href="tel:181">Call</a></div>
+  <div class="card help"><div><b>1091 – Women in Distress (Police)</b><div class="meta">Police helpline for women</div></div><a class="call" href="tel:1091">Call</a></div>
+  <div class="card help"><div><b>1930 – Cyber Crime</b><div class="meta">Online fraud, morphing, harassment</div></div><a class="call" href="tel:1930">Call</a></div>
+  <div class="card help"><div><b>7827170170 – NCW Helpline</b><div class="meta">National Commission for Women</div></div><a class="call" href="tel:7827170170">Call</a></div>
+  <div class="card help"><div><b>1098 – Childline</b><div class="meta">For girls and children under 18</div></div><a class="call" href="tel:1098">Call</a></div>
+  <div class="card help"><div><b>102 / 108 – Ambulance</b><div class="meta">Medical emergencies</div></div><a class="call" href="tel:108">Call</a></div>
+  <div class="note">Numbers can change. Please verify them on official government sites.</div>
+</section>
+
+<section id="safety">
+  <h2>How to protect yourself</h2>
+  <div class="card tip"><h3>On the road &amp; public places</h3><ul>
+    <li>Share your trip with someone you trust before and during a ride.</li>
+    <li>Stay in well-lit, busy areas. Keep earphones low so you can hear around you.</li>
+    <li>Trust your instincts. If a place or person feels wrong, leave and move toward people.</li>
+    <li>Keep your phone charged and emergency contacts on speed dial.</li></ul></div>
+  <div class="card tip"><h3>If you feel followed</h3><ul>
+    <li>Don’t go home. Walk into a shop, petrol pump, hospital or police booth.</li>
+    <li>Call 112 and stay on the line. Note the person’s clothing, vehicle number and direction.</li></ul></div>
+  <div class="card tip"><h3>Online safety</h3><ul>
+    <li>Never share OTPs, live location or intimate photos with strangers.</li>
+    <li>Screenshot and save abusive messages, then report and block. File at cybercrime.gov.in or call 1930.</li>
+    <li>Use strong, different passwords and enable two-step verification.</li></ul></div>
+  <div class="card tip"><h3>At work</h3><ul>
+    <li>Every workplace with 10+ staff must have an Internal Committee (POSH Act, 2013). You can file a written complaint with it.</li>
+    <li>Keep dates, witnesses and messages in a private record.</li></ul></div>
+  <div class="card tip"><h3>Simple self-defence</h3><ul>
+    <li>Aim for vulnerable points: eyes, nose, throat, groin, knees. Strike, then run.</li>
+    <li>Shout loudly (“Fire!” often draws more attention). Your voice is a strong tool.</li>
+    <li>Everyday items such as keys, an umbrella or a pen can help you create distance. A local self-defence class builds confidence.</li></ul></div>
+  <div class="card tip"><h3>Your rights</h3><ul>
+    <li>You can file a Zero FIR at any police station, regardless of where the incident happened.</li>
+    <li>A woman cannot normally be arrested after sunset and before sunrise without a magistrate’s permission.</li>
+    <li>You can ask for a woman officer to record your statement.</li></ul></div>
+</section>
+</main>
+
+<button class="sos" id="sosBtn" aria-label="Send my live location">📍 SOS – Send Location</button>
+
+<dialog id="sosDlg">
+  <h2 style="margin-top:0">Send live location</h2>
+  <div id="locState" class="meta">Getting your location…</div>
+  <div id="locBox" style="display:none">
+    <div class="note" id="locMsg" style="margin:10px 0;word-break:break-all"></div>
+    <label class="meta" for="contact">Trusted contact number (optional, saved on this device only)</label>
+    <input id="contact" type="tel" inputmode="tel" placeholder="e.g. 98XXXXXXXX">
+    <div class="row">
+      <a class="btn" id="wa" style="text-decoration:none">WhatsApp</a>
+      <a class="btn alt" id="sms" style="text-decoration:none">SMS</a>
+      <button class="btn alt" id="share">Share…</button>
+      <button class="btn alt" id="copy">Copy</button>
+    </div>
+    <div class="row"><a class="call red" href="tel:112">📞 Call 112 now</a></div>
+    <p class="note">Browsers can’t silently message the police. Tap a button above to send, and call 112 for dispatch. Police can also be reached via the 112 India app’s SOS.</p>
+  </div>
+  <div class="row"><button class="btn alt" id="closeDlg">Close</button></div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
